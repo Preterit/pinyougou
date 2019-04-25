@@ -28,5 +28,8 @@ app.service('brandService',function($http){
 	this.search=function(page,rows,searchEntity){
 		return $http.post('../brand/search.do?page='+page+"&rows="+rows, searchEntity);
 	}   
-	
+	//查询所有品牌列表
+	this.selectOptionList=function(){
+		return $http.post('../brand/selectOptionList.do');
+	} 
 });

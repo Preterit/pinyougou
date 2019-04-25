@@ -29,4 +29,8 @@ app.service('specificationService',function($http){
 	this.search=function(page,rows,searchEntity){
 		return $http.post('../specification/search.do?page='+page+"&rows="+rows, searchEntity);
 	}    	
+	//获取所有规格
+	this.selectSpecList=function(){
+		return $http.post('../specification/selectSpecList.do');
+	}    	
 });
